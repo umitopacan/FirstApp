@@ -7,13 +7,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
 
     EditText etNum1, etNum2;
     Button btnCal;
-
+    TextView tvResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +23,15 @@ public class MainActivity extends ActionBarActivity {
 
         etNum1 = (EditText)findViewById(R.id.et_num1);
         etNum2 = (EditText)findViewById(R.id.et_num2);
+        tvResult = (TextView)findViewById(R.id.tv_result);
 
     }
 
     public void calculate(View view){
         int n1 = Integer.valueOf(etNum1.getText().toString());
         int n2 = Integer.valueOf(etNum2.getText().toString());
+
+        tvResult.setText( String.valueOf(n1+n2) );
     }
 
     @Override
