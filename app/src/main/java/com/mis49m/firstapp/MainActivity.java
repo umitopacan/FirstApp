@@ -14,6 +14,7 @@ public class MainActivity extends ActionBarActivity {
     EditText etNum1, etNum2;
     Button btnCal;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +26,8 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void calculate(View view){
-
+        int n1 = Integer.valueOf(etNum1.getText().toString());
+        int n2 = Integer.valueOf(etNum2.getText().toString());
     }
 
     @Override
