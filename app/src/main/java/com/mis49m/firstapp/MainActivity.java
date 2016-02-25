@@ -1,5 +1,6 @@
 package com.mis49m.firstapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -32,6 +33,11 @@ public class MainActivity extends ActionBarActivity {
         int n2 = Integer.valueOf(etNum2.getText().toString());
 
         tvResult.setText( String.valueOf(n1+n2) );
+
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra(SecondActivity.PARAM_KEY, String.valueOf(n1+n2) );
+        startActivity(intent);
+
     }
 
     @Override
